@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucía Montes · Centro de Estética | Mockup</title>
+  <meta name="description" content="Cosmetología integral en Laureles, Medellín. Protocolos personalizados para una piel sana y equilibrada.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="img/logo-icon.jpeg">
+</head>
+<body>
+  <!-- Header: menú limpio estilo Sitejet + logo de marca -->
+  <header class="site-header">
+    <div class="contenedor nav-barra">
+      <a class="logo" href="#inicio" aria-label="Lucía Montes Centro de Estética">
+        <img src="img/logo-transparente.png" alt="Lucía Montes Centro de Estética">
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+      </button>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#inicio" class="active">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#tratamientos">Tratamientos</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-primario nav-cta" href="https://wa.me/573192185873" target="_blank" rel="noopener">Agendar</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero carrusel: estructura del template + marca Lucía Montes -->
+    <section class="hero-carrusel" id="inicio" aria-roledescription="carrusel" aria-label="Destacados del centro">
+      <div class="carrusel" data-carrusel>
+        <div class="carrusel-track">
+          <article class="carrusel-slide is-active">
+            <img src="img/carousel-1.jpg" alt="Tratamiento facial en Lucía Montes">
+            <div class="carrusel-overlay">
+              <div class="carrusel-contenido">
+                <span class="eyebrow eyebrow-claro">Cosmetología integral · Laureles</span>
+                <h1>Cuidado experto para <em>piel y bienestar</em></h1>
+                <p>Protocolos personalizados para una piel sana y equilibrada.</p>
+                <div class="hero-acciones">
+                  <a class="btn btn-whatsapp" href="https://wa.me/573192185873?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener">Agendar por WhatsApp</a>
+                  <a class="btn btn-claro" href="#tratamientos">Ver tratamientos</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="carrusel-slide">
+            <img src="img/carousel-2.jpg" alt="Protocolos faciales regenerativos">
+            <div class="carrusel-overlay">
+              <div class="carrusel-contenido">
+                <span class="eyebrow eyebrow-claro">Facial regenerativo</span>
+                <h2 class="carrusel-titulo">Protocolos para luminosidad y firmeza</h2>
+                <p>Valoración previa y acompañamiento en cada etapa del tratamiento.</p>
+                <div class="hero-acciones">
+                  <a class="btn btn-whatsapp" href="https://wa.me/573192185873?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20faciales" target="_blank" rel="noopener">Consultar facial</a>
+                  <a class="btn btn-claro" href="#tratamientos">Ver tratamientos</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="carrusel-slide">
+            <img src="img/carousel-3.jpg" alt="Tratamientos corporales">
+            <div class="carrusel-overlay">
+              <div class="carrusel-contenido">
+                <span class="eyebrow eyebrow-claro">Corporal</span>
+                <h2 class="carrusel-titulo">Cuerpo con criterio y resultados reales</h2>
+                <p>Tratamientos corporales pensados para contorno, firmeza y bienestar.</p>
+                <div class="hero-acciones">
+                  <a class="btn btn-whatsapp" href="https://wa.me/573192185873?text=Hola%2C%20quiero%20informaci%C3%B3n%20corporal" target="_blank" rel="noopener">Consultar corporal</a>
+                  <a class="btn btn-claro" href="#agenda">Agendar valoración</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <button class="carrusel-btn carrusel-prev" type="button" data-carrusel-prev aria-label="Imagen anterior">&#8592;</button>
+        <button class="carrusel-btn carrusel-next" type="button" data-carrusel-next aria-label="Imagen siguiente">&#8594;</button>
+
+        <div class="carrusel-indicadores" role="tablist" aria-label="Seleccionar imagen">
+          <button type="button" class="is-active" data-carrusel-dot="0" aria-label="Ir a imagen 1"></button>
+          <button type="button" data-carrusel-dot="1" aria-label="Ir a imagen 2"></button>
+          <button type="button" data-carrusel-dot="2" aria-label="Ir a imagen 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Valores: estructura Sitejet “We Care About” con lenguaje de marca -->
+    <section class="seccion valores" id="valores">
+      <div class="contenedor">
+        <div class="seccion-titulo revelar">
+          <span class="eyebrow">Nuestra esencia</span>
+          <h2>Lo que cuidamos en cada protocolo</h2>
+        </div>
+        <div class="valores-grid">
+          <article class="valor revelar">
+            <div class="valor-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3c2.5 3 4 5.2 4 7.5a4 4 0 1 1-8 0C8 8.2 9.5 6 12 3z"/><path d="M8 18c1.2 1.4 2.5 2.2 4 2.2s2.8-.8 4-2.2"/></svg>
+            </div>
+            <h3>Naturaleza</h3>
+            <p>Activos y rutinas pensadas para respetar el equilibrio natural de tu piel.</p>
+          </article>
+          <article class="valor revelar">
+            <div class="valor-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+            </div>
+            <h3>Cuidado</h3>
+            <p>Atención cercana, valoración previa y seguimiento en cada etapa del tratamiento.</p>
+          </article>
+          <article class="valor revelar">
+            <div class="valor-icono" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l2.2 6.6H21l-5.4 3.9 2.1 6.5L12 16.8 6.3 20l2.1-6.5L3 9.6h6.8L12 3z"/></svg>
+            </div>
+            <h3>Resultados</h3>
+            <p>Protocolos profesionales con foco en mejoras visibles, sostenidas y seguras.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nosotros: bloque de plantilla HTML Codex, rediseñado -->
+    <section class="seccion" id="nosotros">
+      <div class="contenedor sobre-grid">
+        <div class="sobre-foto revelar">
+          <img src="img/about.jpg" alt="Espacio de atención Lucía Montes">
+        </div>
+        <div class="sobre-copy revelar">
+          <span class="eyebrow">Sobre el centro</span>
+          <h2>Estética con criterio clínico y trato humano</h2>
+          <p class="lead">
+            Lucía Montes Centro de Estética, en Laureles (Medellín), ofrece cosmetología integral
+            orientada a valoración, prevención y tratamientos faciales y corporales.
+          </p>
+          <ul class="sobre-lista">
+            <li>Valoración personalizada antes de cada protocolo</li>
+            <li>Tratamientos faciales y corporales de alta demanda</li>
+            <li>Acompañamiento por WhatsApp para agendar con facilidad</li>
+            <li>Enfoque profesional, discreto y cercano</li>
+          </ul>
+          <a class="btn btn-primario" href="#contacto">Conocer el centro</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tratamientos: grid visual Sitejet + catálogo tipo plantilla -->
+    <section class="seccion" id="tratamientos" style="background: var(--blanco); border-block: 1px solid var(--beige-nude);">
+      <div class="contenedor">
+        <div class="seccion-titulo revelar">
+          <span class="eyebrow">Servicios</span>
+          <h2>Tratamientos destacados</h2>
+          <p class="lead">Selección visual del mockup. Los nombres y descripciones se ajustarán con el catálogo final del centro.</p>
+        </div>
+        <div class="tratamientos-grid">
+          <a class="tratamiento revelar" href="#contacto">
+            <figure><img src="img/service-1.jpg" alt="Tratamiento facial regenerativo"></figure>
+            <h3>Facial regenerativo</h3>
+            <span>Exosomas · PDRN</span>
+          </a>
+          <a class="tratamiento revelar" href="#contacto">
+            <figure><img src="img/service-2.jpg" alt="Cuidado de la piel"></figure>
+            <h3>Skin care profesional</h3>
+            <span>Limpieza · Nutrición</span>
+          </a>
+          <a class="tratamiento revelar" href="#contacto">
+            <figure><img src="img/service-3.jpg" alt="Tratamiento corporal"></figure>
+            <h3>Corporal modelador</h3>
+            <span>Contorno · Firmeza</span>
+          </a>
+          <a class="tratamiento revelar" href="#contacto">
+            <figure><img src="img/service-4.jpg" alt="Protocolo antiedad"></figure>
+            <h3>Protocolo antiedad</h3>
+            <span>Luminosidad · Textura</span>
+          </a>
+          <a class="tratamiento revelar" href="#contacto">
+            <figure><img src="img/service-5.jpg" alt="Masaje relajante"></figure>
+            <h3>Bienestar y relax</h3>
+            <span>Masajes · Descanso</span>
+          </a>
+          <a class="tratamiento revelar" href="#contacto">
+            <figure><img src="img/service-6.jpg" alt="Valoración estética"></figure>
+            <h3>Valoración estética</h3>
+            <span>Diagnóstico · Plan</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frase de marca -->
+    <section class="seccion cita-marca">
+      <div class="contenedor revelar">
+        <blockquote>
+          “La piel no mejora por casualidad, mejora por un protocolo profesional.”
+        </blockquote>
+        <cite>Lucía Montes · Cosmetología integral</cite>
+      </div>
+    </section>
+
+    <!-- Testimonios: slider estilo Berlin -->
+    <section class="seccion testimonios" id="testimonios">
+      <div class="contenedor">
+        <div class="seccion-titulo revelar">
+          <span class="eyebrow">Clientas</span>
+          <h2>Lo que dicen de nosotros</h2>
+        </div>
+
+        <div class="testimonio-slider revelar" data-slider>
+          <div class="testimonio-track">
+            <article class="testimonio">
+              <img class="testimonio-foto" src="img/team-1.jpg" alt="Clienta satisfecha">
+              <div class="testimonio-texto">
+                <q>Salí con la piel luminosa y un plan claro para seguir en casa.</q>
+                <p>La valoración fue detallada y el trato muy profesional. Me sentí acompañada en todo el proceso.</p>
+                <strong>Andrea R.</strong>
+                <span>Medellín</span>
+              </div>
+            </article>
+            <article class="testimonio">
+              <img class="testimonio-foto" src="img/carousel-2.jpg" alt="Resultado de tratamiento">
+              <div class="testimonio-texto">
+                <q>El protocolo corporal superó lo que esperaba.</q>
+                <p>Agenda fácil por WhatsApp y seguimiento cercano. El espacio transmite calma y confianza.</p>
+                <strong>Carolina M.</strong>
+                <span>Laureles</span>
+              </div>
+            </article>
+            <article class="testimonio">
+              <img class="testimonio-foto" src="img/about.jpg" alt="Experiencia en el centro">
+              <div class="testimonio-texto">
+                <q>Por fin encontré un centro con criterio y resultados.</q>
+                <p>Me explicaron cada paso sin promesas vacías. Eso marca la diferencia.</p>
+                <strong>Juliana P.</strong>
+                <span>Envigado</span>
+              </div>
+            </article>
+          </div>
+          <div class="slider-controles">
+            <button class="slider-btn" type="button" data-prev aria-label="Anterior">&#8592;</button>
+            <button class="slider-btn" type="button" data-next aria-label="Siguiente">&#8594;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Agenda: horarios (plantilla) + CTA WhatsApp -->
+    <section class="seccion agenda" id="agenda">
+      <div class="contenedor agenda-grid">
+        <div class="agenda-card revelar">
+          <span class="eyebrow">Horarios</span>
+          <h2>Atiende con cita previa</h2>
+          <ul class="horarios">
+            <li><span>Lunes — Viernes</span><span>9:00 a.m. — 6:00 p.m.</span></li>
+            <li><span>Sábados</span><span>9:00 a.m. — 2:00 p.m.</span></li>
+            <li><span>Domingos</span><span>Cerrado</span></li>
+          </ul>
+          <p class="form-nota" style="margin-top: 1.25rem;">Horarios de referencia para el mockup. Se confirmarán con el centro.</p>
+        </div>
+        <div class="cta-card revelar">
+          <span class="eyebrow">Reserva</span>
+          <h2>Agenda tu valoración</h2>
+          <p class="lead">Escríbenos por WhatsApp y te orientamos sobre el protocolo ideal según tu piel y tus objetivos.</p>
+          <div class="hero-acciones">
+            <a class="btn btn-whatsapp" href="https://wa.me/573192185873?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener">Escribir al +57 319 2185873</a>
+            <a class="btn btn-outline" href="#contacto">Formulario de contacto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="seccion" id="contacto">
+      <div class="contenedor">
+        <div class="seccion-titulo revelar">
+          <span class="eyebrow">Contacto</span>
+          <h2>Estamos para atenderte</h2>
+        </div>
+        <div class="contacto-grid">
+          <div class="contacto-datos revelar">
+            <div class="dato">
+              <h3>Ubicación</h3>
+              <p>Laureles, Medellín · Colombia</p>
+            </div>
+            <div class="dato">
+              <h3>WhatsApp</h3>
+              <p><a href="https://wa.me/573192185873" target="_blank" rel="noopener">+57 319 2185873</a></p>
+            </div>
+            <div class="dato">
+              <h3>Redes</h3>
+              <p><a href="https://instagram.com/luciamontes.cosmetologa" target="_blank" rel="noopener">@luciamontes.cosmetologa</a></p>
+            </div>
+            <div class="dato">
+              <h3>Nota del mockup</h3>
+              <p>Este formulario es demostrativo. En la versión final se conectará a correo o CRM.</p>
+            </div>
+          </div>
+
+          <form class="formulario revelar" id="formContacto" action="#" method="post">
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+            </div>
+            <div class="campo">
+              <label for="telefono">Teléfono / WhatsApp</label>
+              <input id="telefono" name="telefono" type="tel" placeholder="+57 300 000 0000" required>
+            </div>
+            <div class="campo">
+              <label for="servicio">Interés</label>
+              <select id="servicio" name="servicio">
+                <option value="valoracion">Valoración estética</option>
+                <option value="facial">Tratamiento facial</option>
+                <option value="corporal">Tratamiento corporal</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué te gustaría trabajar..."></textarea>
+            </div>
+            <button class="btn btn-primario" type="submit">Enviar consulta</button>
+            <p class="form-nota" id="formFeedback" hidden>Gracias. En el mockup este envío solo simula la confirmación.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="contenedor">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/logo-transparente.png" alt="Lucía Montes">
+          <p>Centro de estética y cosmetología integral en Laureles, Medellín.</p>
+        </div>
+        <div>
+          <h3>Explorar</h3>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#tratamientos">Tratamientos</a>
+          <a href="#agenda">Agenda</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <a href="https://wa.me/573192185873" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://instagram.com/luciamontes.cosmetologa" target="_blank" rel="noopener">Instagram</a>
+          <a href="#inicio">Laureles, Medellín</a>
+        </div>
+        <div>
+          <h3>Conexiones</h3>
+          <div class="redes">
+            <a href="https://instagram.com/luciamontes.cosmetologa" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+            <a href="https://wa.me/573192185873" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <span>© 2026 Lucía Montes Centro de Estética</span>
+        <span>Mockup visual · Fase de definición de imagen</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-flotante" href="https://wa.me/573192185873" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.1 17.7L2 22l4.4-1.1A11 11 0 1 0 20.5 3.5zm-8.5 17a9 9 0 0 1-4.6-1.3l-.3-.2-2.6.7.7-2.5-.2-.3a9 9 0 1 1 7 3.6zm5-6.7c-.3-.1-1.6-.8-1.9-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.5-.6c.1-.2.2-.3.3-.5s0-.4 0-.5-.6-1.5-.8-2-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3a2.3 2.3 0 0 0-.7 1.7c0 1 0 1.9.8 3a13 13 0 0 0 2.5 3 11.7 11.7 0 0 0 3.5 2.1c.5.2.9.2 1.2.1a2.5 2.5 0 0 0 1.7-1.1c.2-.3.2-.6.1-.8l-.5-.2z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
