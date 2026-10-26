@@ -439,6 +439,11 @@ h3 {
   gap: 2rem;
 }
 
+.valores-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
 .valor {
   text-align: center;
   padding: 1.5rem 1rem;
@@ -534,49 +539,231 @@ h3 {
   flex-shrink: 0;
 }
 
-/* ---------- Tratamientos (grid Sitejet) ---------- */
+/* ---------- Objetivos ---------- */
 
-.tratamientos-grid {
+.objetivos {
+  background: var(--blanco);
+  border-block: 1px solid var(--beige-nude);
+}
+
+.objetivos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.objetivo {
+  display: block;
+  background: var(--blanco-marfil);
+  overflow: hidden;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.objetivo:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-suave);
+}
+
+.objetivo figure {
+  overflow: hidden;
+  background: var(--beige-nude);
+}
+
+.objetivo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.objetivo:hover img {
+  transform: scale(1.05);
+}
+
+.objetivo-copy {
+  padding: 1.15rem 1rem 1.35rem;
+}
+
+.objetivo-copy h3 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.objetivo-copy span {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dorado-champan);
+  font-weight: 500;
+}
+
+/* ---------- Líneas de servicio ---------- */
+
+.servicios {
+  background: var(--blanco-marfil);
+}
+
+.lineas-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
-.tratamiento {
-  display: block;
+.linea {
+  background: var(--blanco);
+  border: 1px solid var(--beige-nude);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.tratamiento figure {
+.linea figure {
   overflow: hidden;
-  margin-bottom: 1rem;
   background: var(--beige-nude);
 }
 
-.tratamiento img {
+.linea img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   transition: transform 0.6s ease;
 }
 
-.tratamiento:hover img {
-  transform: scale(1.05);
+.linea:hover img {
+  transform: scale(1.04);
 }
 
-.tratamiento h3 {
-  font-family: var(--fuente-display);
-  font-size: 1.35rem;
-  text-align: center;
+.linea-body {
+  padding: 1.5rem 1.35rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.linea-body h3 {
+  font-size: 1.45rem;
+  margin-bottom: 1rem;
   font-weight: 500;
 }
 
-.tratamiento span {
+.linea-body ul {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: 1.35rem;
+  flex: 1;
+}
+
+.linea-body li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.linea-body li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--dorado-champan);
+}
+
+.enlace-linea {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--verde-salvia);
+}
+
+.enlace-linea:hover {
+  color: var(--dorado-champan);
+}
+
+/* ---------- Destacado PDRN ---------- */
+
+.destacado {
+  background: var(--blanco);
+}
+
+.destacado-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+}
+
+.destacado-foto {
+  overflow: hidden;
+  background: var(--beige-nude);
+}
+
+.destacado-foto img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.destacado-copy .lead {
+  margin: 1rem 0 1.5rem;
+}
+
+/* ---------- Habla con Lucía ---------- */
+
+.lucia {
+  background: var(--beige-nude);
+}
+
+.lucia-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+}
+
+.lucia-foto {
+  overflow: hidden;
+  background: var(--blanco);
+}
+
+.lucia-foto img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.lucia-copy .lead {
+  margin: 1rem 0 1.5rem;
+}
+
+.lucia-datos {
+  display: grid;
+  gap: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+
+.lucia-datos strong {
   display: block;
-  text-align: center;
-  margin-top: 0.35rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  color: var(--gris-taupe);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dorado-champan);
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.lucia-datos a,
+.lucia-datos span {
+  color: var(--texto);
+  font-weight: 400;
+}
+
+.lucia-datos a:hover {
+  color: var(--verde-salvia);
 }
 
 /* ---------- Cita de marca ---------- */
@@ -953,6 +1140,8 @@ h3 {
   .sobre-grid,
   .agenda-grid,
   .contacto-grid,
+  .destacado-grid,
+  .lucia-grid,
   .testimonio {
     grid-template-columns: 1fr;
   }
@@ -966,7 +1155,9 @@ h3 {
   }
 
   .valores-grid,
-  .tratamientos-grid {
+  .valores-grid-4,
+  .objetivos-grid,
+  .lineas-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -1012,7 +1203,9 @@ h3 {
   }
 
   .valores-grid,
-  .tratamientos-grid,
+  .valores-grid-4,
+  .objetivos-grid,
+  .lineas-grid,
   .footer-grid {
     grid-template-columns: 1fr;
   }
