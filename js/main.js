@@ -186,4 +186,97 @@
     if (feedback) feedback.hidden = false;
     form.reset();
   });
+
+  // ===== Reseñas carousel =====
+  const reseñas = document.querySelector("[data-reseñas]");
+  if (reseñas) {
+    const track = reseñas.querySelector(".reseñas-track");
+    const slides = [...reseñas.querySelectorAll(".reseña-slide")];
+    const dots = [...reseñas.querySelectorAll("[data-reseñas-dot]")];
+    const prev = reseñas.querySelector("[data-reseñas-prev]");
+    const next = reseñas.querySelector("[data-reseñas-next]");
+    let index = 0;
+    let timer;
+
+    const goTo = (i) => {
+      index = (i + slides.length) % slides.length;
+      if (track) track.style.transform = `translateX(-${index * 100}%)`;
+      slides.forEach((slide, n) => slide.classList.toggle("is-active", n === index));
+      dots.forEach((dot, n) => dot.classList.toggle("is-active", n === index));
+    };
+
+    const play = () => {
+      clearInterval(timer);
+      timer = setInterval(() => goTo(index + 1), 7000);
+    };
+
+    prev?.addEventListener("click", () => {
+      goTo(index - 1);
+      play();
+    });
+    next?.addEventListener("click", () => {
+      goTo(index + 1);
+      play();
+    });
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        goTo(Number(dot.dataset.reseñasDot));
+        play();
+      });
+    });
+
+    reseñas.addEventListener("mouseenter", () => clearInterval(timer));
+    reseñas.addEventListener("mouseleave", play);
+    goTo(0);
+    play();
+  }
+
+  // ===== Pilares accordion =====
+  const pilares = [...document.querySelectorAll("[data-pilar]")];
+  pilares.forEach((pilar) => {
+    const toggle = pilar.querySelector(".pilar-toggle");
+    const detalle = pilar.querySelector(".pilar-detalle");
+    toggle?.addEventListener("click", () => {
+      const willOpen = !pilar.classList.contains("is-open");
+      pilares.forEach((other) => {
+        other.classList.remove("is-open");
+        other.querySelector(".pilar-toggle")?.setAttribute("aria-expanded", "false");
+        const d = other.querySelector(".pilar-detalle");
+        if (d) d.hidden = true;
+      });
+      if (willOpen) {
+        pilar.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+        if (detalle) detalle.hidden = false;
+      }
+    });
+  });
+
+  // ===== Tratamiento cards expand → WhatsApp =====
+  const tratamientoCards = [...document.querySelectorAll("[data-tratamiento]")];
+  tratamientoCards.forEach((card) => {
+    const openCard = () => {
+      const willOpen = !card.classList.contains("is-open");
+      tratamientoCards.forEach((other) => {
+        other.classList.remove("is-open");
+        other.setAttribute("aria-expanded", "false");
+      });
+      if (willOpen) {
+        card.classList.add("is-open");
+        card.setAttribute("aria-expanded", "true");
+      }
+    };
+
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a")) return;
+      openCard();
+    });
+
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openCard();
+      }
+    });
+  });
 })();
