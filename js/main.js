@@ -252,31 +252,4 @@
     });
   });
 
-  // ===== Tratamiento cards expand → WhatsApp =====
-  const tratamientoCards = [...document.querySelectorAll("[data-tratamiento]")];
-  tratamientoCards.forEach((card) => {
-    const openCard = () => {
-      const willOpen = !card.classList.contains("is-open");
-      tratamientoCards.forEach((other) => {
-        other.classList.remove("is-open");
-        other.setAttribute("aria-expanded", "false");
-      });
-      if (willOpen) {
-        card.classList.add("is-open");
-        card.setAttribute("aria-expanded", "true");
-      }
-    };
-
-    card.addEventListener("click", (event) => {
-      if (event.target.closest("a")) return;
-      openCard();
-    });
-
-    card.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        openCard();
-      }
-    });
-  });
 })();

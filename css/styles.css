@@ -767,12 +767,12 @@ h3 {
   background: var(--blanco);
   border: 1px solid var(--beige-nude);
   padding: 1.25rem 1.2rem;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
   transition: transform var(--transicion), box-shadow var(--transicion), border-color var(--transicion);
 }
 
-.tratamiento-card:hover,
-.tratamiento-card.is-open {
+.tratamiento-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--sombra-suave);
   border-color: rgba(198, 169, 107, 0.55);
@@ -789,17 +789,14 @@ h3 {
 .tratamiento-card p {
   color: var(--gris-taupe);
   font-size: 0.92rem;
+  flex: 1;
 }
 
 .tratamiento-accion {
-  display: none;
+  display: block;
   margin-top: 1rem;
   padding-top: 0.85rem;
   border-top: 1px solid var(--beige-nude);
-}
-
-.tratamiento-card.is-open .tratamiento-accion {
-  display: block;
 }
 
 .page-info {
