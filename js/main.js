@@ -1,5 +1,24 @@
+/**
+ * Lucía Montes — scripts compartidos (todas las páginas)
+ * -------------------------------------------------------
+ * Dónde cambiar qué:
+ * - Preloader .............. pantalla de carga al entrar
+ * - Carrusel hero .......... slides del home ([data-carrusel])
+ * - Nav móvil .............. menú hamburguesa (#navToggle / #navMenu)
+ * - Header scrolled ........ sombra del header al bajar
+ * - Scroll top ............. botón ↑ (#scrollTop)
+ * - Smooth scroll .......... anclas #contacto, #pilares, etc.
+ * - FAQ .................... acordeón de preguntas (.faq-item)
+ * - Reveal ................. animación al hacer scroll (.revelar)
+ * - Formulario ............. demo del form de contacto (#formContacto)
+ * - Reseñas ................ carrusel Google ([data-reseñas])
+ * - Pilares ................ expandir resumen ([data-pilar])
+ *
+ * WhatsApp (número): buscar "573192185873" en los HTML.
+ */
 (() => {
-  // ===== Preloader (Serenity) =====
+  // ---------- Preloader ----------
+  // Muestra la animación inicial y se oculta al cargar (mín. ~1.1s).
   const preloader = document.getElementById("preloader");
   if (preloader) {
     const minLoadTime = 1100;
@@ -17,10 +36,11 @@
     };
 
     window.addEventListener("load", hidePreloader);
-    setTimeout(hidePreloader, 4500);
+    setTimeout(hidePreloader, 4500); // seguridad si load no dispara
   }
 
-  // ===== Carrusel =====
+  // ---------- Carrusel del hero (solo home) ----------
+  // Autoplay cada 6.5s; flechas y puntos; pausa al pasar el mouse.
   const carrusel = document.querySelector("[data-carrusel]");
   if (carrusel) {
     const slides = [...carrusel.querySelectorAll(".carrusel-slide")];
@@ -61,7 +81,8 @@
     play();
   }
 
-  // ===== Nav móvil =====
+  // ---------- Menú móvil / tablet ----------
+  // Abre/cierra el nav; al tocar un enlace se cierra solo.
   const navToggle = document.getElementById("navToggle");
   const navMenu = document.getElementById("navMenu");
   const navLinks = navMenu ? [...navMenu.querySelectorAll("a")] : [];
@@ -80,10 +101,10 @@
     });
   }
 
-  // ===== Header scrolled + scroll top + active link =====
+  // ---------- Header al hacer scroll + botón subir ----------
+  // .scrolled en #siteHeader (>60px). .show en #scrollTop (>500px).
   const siteHeader = document.getElementById("siteHeader");
   const scrollTopBtn = document.getElementById("scrollTop");
-  const sections = [...document.querySelectorAll("main section[id]")];
   const onScroll = () => {
     const y = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -103,7 +124,7 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // ===== Smooth scroll anclas =====
+  // ---------- Scroll suave a anclas (#contacto, #pilares…) ----------
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
       const href = anchor.getAttribute("href");
@@ -115,7 +136,7 @@
     });
   });
 
-  // ===== Testimonios =====
+  // ---------- Slider testimonios legacy (si existe [data-slider]) ----------
   const slider = document.querySelector("[data-slider]");
   if (slider) {
     const track = slider.querySelector(".testimonio-track");
@@ -139,7 +160,7 @@
     });
   }
 
-  // ===== FAQ accordion =====
+  // ---------- FAQ (acordeón: una pregunta abierta a la vez) ----------
   const faqItems = [...document.querySelectorAll(".faq-item")];
   faqItems.forEach((item) => {
     const head = item.querySelector(".faq-head");
@@ -156,7 +177,7 @@
     });
   });
 
-  // ===== Reveal on scroll =====
+  // ---------- Reveal al entrar en viewport (.revelar → .visible) ----------
   const revelar = [...document.querySelectorAll(".revelar")];
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
@@ -178,7 +199,7 @@
     revelar.forEach((el) => el.classList.add("visible"));
   }
 
-  // ===== Form demo =====
+  // ---------- Formulario de contacto (mockup: no envía a servidor) ----------
   const form = document.getElementById("formContacto");
   const feedback = document.getElementById("formFeedback");
   form?.addEventListener("submit", (event) => {
@@ -187,7 +208,8 @@
     form.reset();
   });
 
-  // ===== Reseñas carousel =====
+  // ---------- Carrusel de reseñas Google curadas ----------
+  // Editar textos en el HTML (#reseñas / #reseñas-lucia). Intervalo: 7s.
   const reseñas = document.querySelector("[data-reseñas]");
   if (reseñas) {
     const track = reseñas.querySelector(".reseñas-track");
@@ -231,7 +253,8 @@
     play();
   }
 
-  // ===== Pilares accordion =====
+  // ---------- Pilares expandibles (home y Sobre Lucía) ----------
+  // Un solo pilar abierto. Textos en .pilar-detalle dentro del HTML.
   const pilares = [...document.querySelectorAll("[data-pilar]")];
   pilares.forEach((pilar) => {
     const toggle = pilar.querySelector(".pilar-toggle");
@@ -251,5 +274,4 @@
       }
     });
   });
-
 })();

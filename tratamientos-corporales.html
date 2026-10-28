@@ -1,4 +1,21 @@
 <!DOCTYPE html>
+<!--
+  Lucía Montes — Tratamientos corporales — catálogo + FAQ + CTA WhatsApp
+  Archivo: tratamientos-corporales.html
+  ------------------------------------------------
+  Partes comunes en todas las páginas:
+  - Header (#siteHeader): logo, menú, CTA
+  - Footer: pilares, redes, agenda
+  - Preloader, scroll-top, WhatsApp flotante
+  Estilos: css/styles.css  |  Lógica: js/main.js
+
+  Esta página:
+  - .page-hero ........ título del pilar + imagen
+  - .nivel ............. esenciales / especializados / premium
+  - .tratamiento-card .. cada servicio + botón «Saber más» (WhatsApp)
+  - .page-info / .faq .. beneficios, para quién, preguntas
+  - .cta-final ......... solicitar cita
+-->
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -58,6 +75,8 @@
 
     <section class="seccion">
       <div class="contenedor">
+        <!-- Catálogo: editar títulos/descripciones de cada .tratamiento-card;
+             el href de «Saber más» lleva el mensaje a WhatsApp -->
         <div class="seccion-titulo revelar">
           <span class="eyebrow">Catálogo</span>
           <h2>Tratamientos disponibles</h2>

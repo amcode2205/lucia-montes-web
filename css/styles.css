@@ -1,14 +1,33 @@
 /* =========================================================
-   Lucía Montes — Centro de Estética
-   Mockup visual · Paleta y tipografía de marca
+   Lucía Montes — Centro de Estética · styles.css
+   ---------------------------------------------------------
+   MAPA RÁPIDO (busca el título de sección más abajo):
+   - :root .................. colores, fuentes, contenedor
+   - Botones ................ .btn, WhatsApp, outline, etc.
+   - Header ................. logo, menú, CTA, menú móvil
+   - Hero carrusel .......... portada del home
+   - Pilares ................ bloques 01–04 (home)
+   - Experiencia Lucía ...... trayectoria / filosofía
+   - Páginas internas ....... heroes, niveles, cards tratamiento
+   - Reseñas Google ......... carrusel de opiniones
+   - Contacto / Footer ...... datos, redes, pie
+   - WhatsApp flotante ...... botón verde fijo
+   - Preloader / FAQ / Reveal / Responsive
+
+   Cambios frecuentes:
+   - Colores de marca → variables en :root
+   - Tamaño del logo → .logo img (Header)
+   - Texto de reseñas → HTML (#reseñas), no aquí
+   - Botón Saber más → .tratamiento-accion
    ========================================================= */
 
 :root {
-  --verde-salvia: #6f7f73;
-  --beige-nude: #e8e1d8;
-  --blanco-marfil: #f7f6f2;
-  --dorado-champan: #c6a96b;
-  --gris-taupe: #8a8680;
+  /* Identidad visual Lucía Montes */
+  --verde-salvia: #6f7f73;      /* detalles, botones secundarios, footer */
+  --beige-nude: #e8e1d8;        /* fondos de sección */
+  --blanco-marfil: #f7f6f2;     /* fondo principal */
+  --dorado-champan: #c6a96b;    /* acentos, numeración, CTAs */
+  --gris-taupe: #8a8680;        /* textos secundarios */
   --texto: #3f3c39;
   --texto-suave: #8a8680;
   --blanco: #ffffff;
@@ -121,6 +140,7 @@ h3 {
 }
 
 /* ---------- Botones ---------- */
+/* Primario = dorado · Outline = borde · WhatsApp = verde chat */
 
 .btn {
   display: inline-flex;
@@ -172,6 +192,7 @@ h3 {
 }
 
 /* ---------- Header ---------- */
+/* Logo, nav (Inicio… Contacto), CTA «Agenda tu cita», menú ≤1100px */
 
 .site-header {
   position: sticky;
@@ -271,7 +292,8 @@ h3 {
   top: 5px;
 }
 
-/* ---------- Hero carrusel (template + marca) ---------- */
+/* ---------- Hero carrusel (home) ---------- */
+/* Slides full-bleed, overlay de texto, flechas e indicadores */
 
 .hero-carrusel {
   position: relative;
@@ -549,7 +571,8 @@ h3 {
   flex-shrink: 0;
 }
 
-/* ---------- Pilares de estética integral ---------- */
+/* ---------- Pilares de estética integral (home) ---------- */
+/* Grid 4 columnas; clic abre .pilar-detalle (ver main.js) */
 
 .pilares {
   background: var(--beige-nude);
@@ -672,6 +695,7 @@ h3 {
 }
 
 /* ---------- Experiencia Lucía ---------- */
+/* Bloque institucional: texto + foto (trayectoria / filosofía) */
 
 .experiencia {
   background: var(--blanco-marfil);
@@ -715,6 +739,8 @@ h3 {
 }
 
 /* ---------- Páginas internas ---------- */
+/* Hero de pilar, niveles (esenciales/especializados/premium),
+   cards con botón «Saber más» siempre visible → WhatsApp */
 
 .page-hero {
   padding: clamp(3rem, 7vw, 5rem) 0;
@@ -964,6 +990,7 @@ h3 {
 }
 
 /* ---------- Reseñas Google ---------- */
+/* Carrusel curado (opción C). Textos en HTML; estilos aquí */
 
 .reseñas {
   background: var(--blanco-marfil);
@@ -1196,6 +1223,7 @@ h3 {
 }
 
 /* ---------- Contacto ---------- */
+/* Datos + iconos de redes (.redes-contacto) + formulario */
 
 .contacto-grid {
   display: grid;
@@ -1280,6 +1308,7 @@ h3 {
 }
 
 /* ---------- Footer ---------- */
+/* Marca, pilares, centro, redes (.redes) y CTA agenda */
 
 .site-footer {
   background: var(--verde-salvia);
@@ -1648,6 +1677,7 @@ h3 {
 }
 
 /* ---------- Responsive ---------- */
+/* 1100px: menú hamburguesa · 980px: 2 cols · 760px: 1 col */
 
 @media (max-width: 1100px) {
   .nav-toggle {

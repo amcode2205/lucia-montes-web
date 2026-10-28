@@ -1,4 +1,23 @@
 <!DOCTYPE html>
+<!--
+  Lucía Montes — Página de inicio (index.html)
+  ------------------------------------------------
+  Estructura principal (busca por id o comentario):
+  1. #preloader     → animación de carga
+  2. #siteHeader    → logo, menú, «Agenda tu cita»
+  3. #inicio        → hero carrusel (imágenes + textos)
+  4. #pilares       → 4 pilares expandibles
+  5. #reseñas       → carrusel opiniones Google (textos aquí)
+  6. #experiencia   → trayectoria / filosofía
+  7. #agenda        → horarios + CTA WhatsApp
+  8. #faq           → preguntas frecuentes
+  9. #contacto      → ubicación, redes, formulario
+  10. footer        → enlaces + redes
+  11. #scrollTop / .wa-flotante → botones fijos
+
+  Archivos compartidos: css/styles.css · js/main.js
+  WhatsApp: 573192185873  |  Logo: img/logo-transparente.png
+-->
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -105,7 +124,7 @@
       </div>
     </section>
 
-    <!-- Cuatro pilares -->
+    <!-- ========== PILARES (editar textos en cada .pilar-detalle) ========== -->
     <section class="seccion pilares" id="pilares">
       <div class="contenedor">
         <div class="seccion-titulo revelar">
@@ -190,7 +209,7 @@
       </div>
     </section>
 
-    <!-- Reseñas Google curadas -->
+    <!-- ========== RESEÑAS GOOGLE (editar .reseña-slide; link Ver en Google) ========== -->
     <section class="seccion reseñas" id="reseñas">
       <div class="contenedor">
         <div class="seccion-titulo revelar">
@@ -268,7 +287,7 @@
       </div>
     </section>
 
-    <!-- Experiencia institucional -->
+    <!-- ========== EXPERIENCIA / TRAYECTORIA ========== -->
     <section class="seccion experiencia" id="experiencia">
       <div class="contenedor experiencia-grid">
         <div class="experiencia-copy revelar">
@@ -293,6 +312,7 @@
       </div>
     </section>
 
+    <!-- ========== CITA DE MARCA ========== -->
     <section class="seccion cita-marca">
       <div class="contenedor revelar">
         <blockquote>
@@ -302,6 +322,7 @@
       </div>
     </section>
 
+    <!-- ========== HORARIOS + RESERVA ========== -->
     <section class="seccion agenda" id="agenda">
       <div class="contenedor agenda-grid">
         <div class="agenda-card revelar">
@@ -325,6 +346,7 @@
       </div>
     </section>
 
+    <!-- ========== FAQ ========== -->
     <section class="seccion faq" id="faq">
       <div class="contenedor">
         <div class="seccion-titulo revelar">
@@ -363,6 +385,7 @@
       </div>
     </section>
 
+    <!-- ========== CONTACTO (redes + formulario) ========== -->
     <section class="seccion" id="contacto">
       <div class="contenedor">
         <div class="seccion-titulo revelar">
@@ -429,6 +452,7 @@
     </section>
   </main>
 
+  <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
     <div class="contenedor">
       <div class="footer-grid">
