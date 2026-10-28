@@ -194,18 +194,21 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  min-height: 5.25rem;
+  min-height: 6.5rem;
+  padding-block: 0.65rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  padding: 0.35rem 0.5rem 0.35rem 0;
 }
 
 .logo img {
-  width: clamp(72px, 10vw, 92px);
+  width: clamp(108px, 14vw, 148px);
   height: auto;
+  display: block;
 }
 
 .nav-menu {
@@ -1292,9 +1295,10 @@ h3 {
 }
 
 .footer-brand img {
-  width: 150px;
-  margin-bottom: 1rem;
-  opacity: 0.95;
+  width: clamp(140px, 18vw, 180px);
+  margin-bottom: 1.15rem;
+  padding: 0.35rem 0.25rem;
+  opacity: 0.98;
 }
 
 .footer-brand p {
