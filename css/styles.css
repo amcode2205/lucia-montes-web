@@ -180,6 +180,13 @@ h3 {
   background: rgba(247, 246, 242, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(232, 225, 216, 0.9);
+  transition: box-shadow var(--transicion), background var(--transicion), border-color var(--transicion);
+}
+
+.site-header.scrolled {
+  background: rgba(247, 246, 242, 0.96);
+  border-bottom-color: var(--beige-nude);
+  box-shadow: 0 8px 28px -14px rgba(63, 60, 57, 0.28);
 }
 
 .nav-barra {
@@ -442,6 +449,11 @@ h3 {
 .valor {
   text-align: center;
   padding: 1.5rem 1rem;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.valor:hover {
+  transform: translateY(-6px);
 }
 
 .valor-icono {
@@ -546,21 +558,33 @@ h3 {
   display: block;
 }
 
-.tratamiento figure {
+.lift-on-hover {
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.lift-on-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--sombra-suave);
+}
+
+.tratamiento figure,
+.img-zoom {
   overflow: hidden;
   margin-bottom: 1rem;
   background: var(--beige-nude);
 }
 
-.tratamiento img {
+.tratamiento img,
+.img-zoom img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
-.tratamiento:hover img {
-  transform: scale(1.05);
+.tratamiento:hover img,
+.img-zoom:hover img {
+  transform: scale(1.08);
 }
 
 .tratamiento h3 {
@@ -934,17 +958,244 @@ h3 {
   fill: currentColor;
 }
 
+/* ---------- Scroll top (Serenity) ---------- */
+
+.scroll-top {
+  position: fixed;
+  right: 1.35rem;
+  bottom: 5.6rem;
+  z-index: 118;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: var(--verde-salvia);
+  color: var(--blanco);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: none;
+  place-items: center;
+  box-shadow: 0 10px 24px rgba(111, 127, 115, 0.3);
+  transition: background var(--transicion), transform var(--transicion), opacity var(--transicion);
+}
+
+.scroll-top.show {
+  display: grid;
+}
+
+.scroll-top:hover {
+  background: #5f6e63;
+  transform: translateY(-2px);
+}
+
+/* ---------- Preloader (Serenity → marca Lucía) ---------- */
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blanco-marfil);
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.preloader-icon {
+  position: relative;
+  width: 72px;
+  height: 72px;
+}
+
+.preloader-icon .ring {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid rgba(198, 169, 107, 0.45);
+  border-radius: 50%;
+  animation: 2s cubic-bezier(0.4, 0, 0.2, 1) infinite preloader-ring;
+}
+
+.preloader-icon .ring:nth-child(2) {
+  inset: 8px;
+  animation-delay: 0.2s;
+  border-color: rgba(111, 127, 115, 0.4);
+}
+
+.preloader-icon .ring:nth-child(3) {
+  inset: 16px;
+  animation-delay: 0.4s;
+  border-color: rgba(198, 169, 107, 0.55);
+}
+
+.preloader-icon .center-dot {
+  position: absolute;
+  inset: 28px;
+  border-radius: 50%;
+  background: var(--dorado-champan);
+  animation: 1.8s ease-in-out infinite preloader-dot;
+}
+
+.preloader-brand {
+  font-family: var(--fuente-display);
+  font-size: 1.45rem;
+  letter-spacing: 0.06em;
+  color: var(--verde-salvia);
+  animation: 2s ease-in-out infinite preloader-fade-text;
+}
+
+.preloader-brand em {
+  font-style: italic;
+  color: var(--dorado-champan);
+  font-weight: 500;
+}
+
+@keyframes preloader-ring {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+}
+
+@keyframes preloader-dot {
+  0%,
+  100% {
+    transform: scale(0.85);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+@keyframes preloader-fade-text {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ---------- FAQ ---------- */
+
+.faq {
+  background: var(--blanco);
+  border-block: 1px solid var(--beige-nude);
+}
+
+.faq-lista {
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.faq-item {
+  border: 1px solid var(--beige-nude);
+  background: var(--blanco-marfil);
+  transition: box-shadow var(--transicion), border-color var(--transicion);
+}
+
+.faq-item:hover,
+.faq-item.open {
+  border-color: rgba(198, 169, 107, 0.55);
+  box-shadow: var(--sombra-suave);
+}
+
+.faq-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  text-align: left;
+  font-family: var(--fuente-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--texto);
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--dorado-champan);
+  color: var(--dorado-champan);
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform var(--transicion), background var(--transicion), color var(--transicion);
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+  background: var(--dorado-champan);
+  color: var(--blanco);
+}
+
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq-item.open .faq-body {
+  max-height: 220px;
+}
+
+.faq-body p {
+  padding: 0 1.25rem 1.2rem;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
 /* ---------- Reveal ---------- */
 
 .revelar {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .revelar.visible {
   opacity: 1;
   transform: none;
+}
+
+.agenda-card,
+.cta-card,
+.formulario {
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.agenda-card:hover,
+.cta-card:hover,
+.formulario:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-suave);
 }
 
 /* ---------- Responsive ---------- */

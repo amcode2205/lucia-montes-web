@@ -12,8 +12,21 @@
   <link rel="icon" href="img/logo-icon.jpeg">
 </head>
 <body>
+  <!-- Preloader inspirado en Serenity, con marca Lucía Montes -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-icon" aria-hidden="true">
+        <span class="ring"></span>
+        <span class="ring"></span>
+        <span class="ring"></span>
+        <span class="center-dot"></span>
+      </div>
+      <span class="preloader-brand">Lucía <em>Montes</em></span>
+    </div>
+  </div>
+
   <!-- Header: menú limpio estilo Sitejet + logo de marca -->
-  <header class="site-header">
+  <header class="site-header" id="siteHeader">
     <div class="contenedor nav-barra">
       <a class="logo" href="#inicio" aria-label="Lucía Montes Centro de Estética">
         <img src="img/logo-transparente.png" alt="Lucía Montes Centro de Estética">
@@ -30,6 +43,7 @@
           <li><a href="#tratamientos">Tratamientos</a></li>
           <li><a href="#testimonios">Testimonios</a></li>
           <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -166,33 +180,33 @@
           <p class="lead">Selección visual del mockup. Los nombres y descripciones se ajustarán con el catálogo final del centro.</p>
         </div>
         <div class="tratamientos-grid">
-          <a class="tratamiento revelar" href="#contacto">
-            <figure><img src="img/service-1.jpg" alt="Tratamiento facial regenerativo"></figure>
+          <a class="tratamiento lift-on-hover revelar" href="#contacto">
+            <figure class="img-zoom"><img src="img/service-1.jpg" alt="Tratamiento facial regenerativo"></figure>
             <h3>Facial regenerativo</h3>
             <span>Exosomas · PDRN</span>
           </a>
-          <a class="tratamiento revelar" href="#contacto">
-            <figure><img src="img/service-2.jpg" alt="Cuidado de la piel"></figure>
+          <a class="tratamiento lift-on-hover revelar" href="#contacto">
+            <figure class="img-zoom"><img src="img/service-2.jpg" alt="Cuidado de la piel"></figure>
             <h3>Skin care profesional</h3>
             <span>Limpieza · Nutrición</span>
           </a>
-          <a class="tratamiento revelar" href="#contacto">
-            <figure><img src="img/service-3.jpg" alt="Tratamiento corporal"></figure>
+          <a class="tratamiento lift-on-hover revelar" href="#contacto">
+            <figure class="img-zoom"><img src="img/service-3.jpg" alt="Tratamiento corporal"></figure>
             <h3>Corporal modelador</h3>
             <span>Contorno · Firmeza</span>
           </a>
-          <a class="tratamiento revelar" href="#contacto">
-            <figure><img src="img/service-4.jpg" alt="Protocolo antiedad"></figure>
+          <a class="tratamiento lift-on-hover revelar" href="#contacto">
+            <figure class="img-zoom"><img src="img/service-4.jpg" alt="Protocolo antiedad"></figure>
             <h3>Protocolo antiedad</h3>
             <span>Luminosidad · Textura</span>
           </a>
-          <a class="tratamiento revelar" href="#contacto">
-            <figure><img src="img/service-5.jpg" alt="Masaje relajante"></figure>
+          <a class="tratamiento lift-on-hover revelar" href="#contacto">
+            <figure class="img-zoom"><img src="img/service-5.jpg" alt="Masaje relajante"></figure>
             <h3>Bienestar y relax</h3>
             <span>Masajes · Descanso</span>
           </a>
-          <a class="tratamiento revelar" href="#contacto">
-            <figure><img src="img/service-6.jpg" alt="Valoración estética"></figure>
+          <a class="tratamiento lift-on-hover revelar" href="#contacto">
+            <figure class="img-zoom"><img src="img/service-6.jpg" alt="Valoración estética"></figure>
             <h3>Valoración estética</h3>
             <span>Diagnóstico · Plan</span>
           </a>
@@ -277,6 +291,55 @@
             <a class="btn btn-whatsapp" href="https://wa.me/573192185873?text=Hola%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener">Escribir al +57 319 2185873</a>
             <a class="btn btn-outline" href="#contacto">Formulario de contacto</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ: elemento útil de Serenity -->
+    <section class="seccion faq" id="faq">
+      <div class="contenedor">
+        <div class="seccion-titulo revelar">
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2>Todo lo que podrías preguntar</h2>
+          <p class="lead">Si no encuentras tu duda, escríbenos por WhatsApp y te orientamos.</p>
+        </div>
+        <div class="faq-lista revelar">
+          <article class="faq-item">
+            <button class="faq-head" type="button" aria-expanded="false">
+              <span>¿Cómo agendo una cita?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-body">
+              <p>Escríbenos por WhatsApp al +57 319 2185873 o usa el formulario de contacto. Te guiamos según tu objetivo y te confirmamos disponibilidad.</p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-head" type="button" aria-expanded="false">
+              <span>¿Qué debo esperar en la primera visita?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-body">
+              <p>Hacemos una valoración personalizada, revisamos tu historial y objetivos, y definimos el protocolo más adecuado antes de iniciar cualquier tratamiento.</p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-head" type="button" aria-expanded="false">
+              <span>¿Atienden solo con cita previa?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-body">
+              <p>Sí. Trabajamos con cita previa para cuidar el tiempo de cada clienta y garantizar un espacio tranquilo y personalizado.</p>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-head" type="button" aria-expanded="false">
+              <span>¿Dónde están ubicados?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-body">
+              <p>Estamos en Laureles, Medellín. Al agendar te compartimos la dirección exacta y recomendaciones de llegada.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -372,6 +435,8 @@
       </div>
     </div>
   </footer>
+
+  <button class="scroll-top" id="scrollTop" type="button" aria-label="Volver arriba">↑</button>
 
   <a class="wa-flotante" href="https://wa.me/573192185873" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.1 17.7L2 22l4.4-1.1A11 11 0 1 0 20.5 3.5zm-8.5 17a9 9 0 0 1-4.6-1.3l-.3-.2-2.6.7.7-2.5-.2-.3a9 9 0 1 1 7 3.6zm5-6.7c-.3-.1-1.6-.8-1.9-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.5-.6c.1-.2.2-.3.3-.5s0-.4 0-.5-.6-1.5-.8-2-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3a2.3 2.3 0 0 0-.7 1.7c0 1 0 1.9.8 3a13 13 0 0 0 2.5 3 11.7 11.7 0 0 0 3.5 2.1c.5.2.9.2 1.2.1a2.5 2.5 0 0 0 1.7-1.1c.2-.3.2-.6.1-.8l-.5-.2z"/></svg>
