@@ -193,20 +193,20 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  min-height: 6.5rem;
-  padding-block: 0.65rem;
+  gap: 1.25rem;
+  min-height: 5.1rem;
+  padding-block: 0.35rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  padding: 0.35rem 0.5rem 0.35rem 0;
+  padding: 0.15rem 0.25rem 0.15rem 0;
 }
 
 .logo img {
-  width: clamp(108px, 14vw, 148px);
+  width: clamp(88px, 11vw, 118px);
   height: auto;
   display: block;
 }
