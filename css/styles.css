@@ -824,25 +824,56 @@ h3 {
   margin: 0.85rem auto 1.5rem;
 }
 
+.pilares-sobre {
+  background: var(--beige-nude);
+}
+
 .pilares-mini {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.85rem;
+  align-items: start;
 }
 
-.pilares-mini a {
-  display: block;
-  padding: 1.15rem 1rem;
-  background: var(--blanco);
-  border: 1px solid var(--beige-nude);
-  font-family: var(--fuente-display);
-  font-size: 1.05rem;
-  transition: border-color var(--transicion), transform var(--transicion);
+.pilar-mini {
+  background: var(--blanco-marfil);
+  border: 1px solid rgba(198, 169, 107, 0.28);
+  padding: 1.15rem 1rem 1.2rem;
+  transition: border-color var(--transicion), box-shadow var(--transicion);
 }
 
-.pilares-mini a:hover {
-  border-color: var(--dorado-champan);
-  transform: translateY(-3px);
+.pilar-mini:hover,
+.pilar-mini.is-open {
+  border-color: rgba(198, 169, 107, 0.7);
+  box-shadow: var(--sombra-suave);
+}
+
+.pilar-mini .pilar-toggle {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.55rem;
+  text-align: left;
+  color: inherit;
+}
+
+.pilar-mini .pilar-toggle h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.pilar-mini .pilar-detalle {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--beige-nude);
+}
+
+.pilar-mini.is-open .pilar-chevron {
+  transform: rotate(45deg);
+  background: var(--dorado-champan);
+  color: var(--blanco);
 }
 
 /* ---------- Tratamientos (grid Sitejet) ---------- */
