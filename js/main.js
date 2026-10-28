@@ -84,7 +84,6 @@
   const siteHeader = document.getElementById("siteHeader");
   const scrollTopBtn = document.getElementById("scrollTop");
   const sections = [...document.querySelectorAll("main section[id]")];
-
   const onScroll = () => {
     const y = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -95,15 +94,6 @@
     if (scrollTopBtn) {
       scrollTopBtn.classList.toggle("show", y > 500);
     }
-
-    let current = sections[0]?.id;
-    const marker = y + 120;
-    sections.forEach((section) => {
-      if (section.offsetTop <= marker) current = section.id;
-    });
-    navLinks.forEach((link) => {
-      link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
-    });
   };
 
   window.addEventListener("scroll", onScroll, { passive: true });

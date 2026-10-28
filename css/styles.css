@@ -546,6 +546,250 @@ h3 {
   flex-shrink: 0;
 }
 
+/* ---------- Pilares de estética integral ---------- */
+
+.pilares {
+  background: var(--beige-nude);
+}
+
+.pilares-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.pilar {
+  background: var(--blanco-marfil);
+  border: 1px solid rgba(198, 169, 107, 0.28);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.pilar:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-suave);
+}
+
+.pilar figure {
+  margin: 0;
+  overflow: hidden;
+  background: var(--beige-nude);
+}
+
+.pilar figure img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.pilar-body {
+  padding: 1.35rem 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.55rem;
+}
+
+.pilar-num {
+  font-family: var(--fuente-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  color: var(--dorado-champan);
+}
+
+.pilar-body h3 {
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.pilar-tagline {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--verde-salvia);
+}
+
+.pilar-body > p:not(.pilar-tagline) {
+  color: var(--gris-taupe);
+  font-size: 0.92rem;
+  flex: 1;
+}
+
+.btn-sm {
+  min-height: 2.5rem;
+  padding: 0.65rem 1.1rem;
+  font-size: 0.7rem;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+/* ---------- Experiencia Lucía ---------- */
+
+.experiencia {
+  background: var(--blanco-marfil);
+}
+
+.experiencia-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+}
+
+.experiencia-copy p {
+  color: var(--gris-taupe);
+  margin-bottom: 1rem;
+}
+
+.experiencia-copy .lead {
+  color: var(--texto);
+  margin: 0.85rem 0 1.25rem;
+}
+
+.experiencia-dato {
+  font-size: 0.78rem !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--verde-salvia) !important;
+  font-weight: 500;
+  margin: 1.25rem 0 1.5rem !important;
+}
+
+.experiencia-foto {
+  overflow: hidden;
+  background: var(--beige-nude);
+}
+
+.experiencia-foto img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* ---------- Páginas internas ---------- */
+
+.page-hero {
+  padding: clamp(3rem, 7vw, 5rem) 0;
+  background: var(--beige-nude);
+}
+
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+.page-hero-copy h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 0.75rem;
+}
+
+.page-hero-foto {
+  overflow: hidden;
+  background: var(--blanco-marfil);
+}
+
+.page-hero-foto img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.nivel {
+  margin-bottom: 2.5rem;
+}
+
+.nivel-titulo {
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dorado-champan);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid rgba(198, 169, 107, 0.35);
+}
+
+.tratamiento-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.tratamiento-card {
+  background: var(--blanco);
+  border: 1px solid var(--beige-nude);
+  padding: 1.25rem 1.2rem;
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tratamiento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-suave);
+}
+
+.tratamiento-card h4 {
+  font-family: var(--fuente-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.45rem;
+  color: var(--texto);
+}
+
+.tratamiento-card p {
+  color: var(--gris-taupe);
+  font-size: 0.92rem;
+}
+
+.page-info {
+  background: var(--beige-nude);
+}
+
+.page-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.cta-final {
+  background: var(--blanco-marfil);
+  text-align: center;
+}
+
+.cta-final-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cta-final-inner p {
+  color: var(--gris-taupe);
+  margin: 0.85rem auto 1.5rem;
+}
+
+.pilares-mini {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
+}
+
+.pilares-mini a {
+  display: block;
+  padding: 1.15rem 1rem;
+  background: var(--blanco);
+  border: 1px solid var(--beige-nude);
+  font-family: var(--fuente-display);
+  font-size: 1.05rem;
+  transition: border-color var(--transicion), transform var(--transicion);
+}
+
+.pilares-mini a:hover {
+  border-color: var(--dorado-champan);
+  transform: translateY(-3px);
+}
+
 /* ---------- Tratamientos (grid Sitejet) ---------- */
 
 .tratamientos-grid {
@@ -1200,41 +1444,7 @@ h3 {
 
 /* ---------- Responsive ---------- */
 
-@media (max-width: 980px) {
-  .sobre-grid,
-  .agenda-grid,
-  .contacto-grid,
-  .testimonio {
-    grid-template-columns: 1fr;
-  }
-
-  .carrusel {
-    min-height: min(86vh, 720px);
-  }
-
-  .carrusel-btn {
-    display: none;
-  }
-
-  .valores-grid,
-  .tratamientos-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .sobre-foto::after {
-    inset: 1rem -0.75rem -0.75rem 1rem;
-  }
-
-  .nav-cta {
-    display: none;
-  }
-}
-
-@media (max-width: 760px) {
+@media (max-width: 1100px) {
   .nav-toggle {
     display: grid;
   }
@@ -1260,10 +1470,57 @@ h3 {
   .nav-menu a {
     padding: 0.85rem 0;
     border-bottom: 1px solid var(--beige-nude);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .sobre-grid,
+  .agenda-grid,
+  .contacto-grid,
+  .experiencia-grid,
+  .page-hero-grid,
+  .page-info-grid,
+  .testimonio {
+    grid-template-columns: 1fr;
+  }
+
+  .carrusel {
+    min-height: min(86vh, 720px);
+  }
+
+  .carrusel-btn {
+    display: none;
   }
 
   .valores-grid,
   .tratamientos-grid,
+  .pilares-grid,
+  .pilares-mini,
+  .tratamiento-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sobre-foto::after {
+    inset: 1rem -0.75rem -0.75rem 1rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .valores-grid,
+  .tratamientos-grid,
+  .pilares-grid,
+  .pilares-mini,
+  .tratamiento-cards,
   .footer-grid {
     grid-template-columns: 1fr;
   }
