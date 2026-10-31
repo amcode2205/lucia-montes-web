@@ -13,6 +13,7 @@
    - Contacto / Footer ...... datos, redes, pie
    - WhatsApp flotante ...... botón verde fijo
    - Preloader / FAQ / Reveal / Responsive
+   - All my links ........... página /links.html (bio redes)
 
    Cambios frecuentes:
    - Colores de marca → variables en :root
@@ -1801,4 +1802,150 @@ h3 {
     width: 2.35rem;
     height: 2.35rem;
   }
+}
+
+/* ---------- All my links (/links.html) ---------- */
+/* Página para bio de Instagram/TikTok. Editar textos en links.html */
+
+.links-body {
+  min-height: 100vh;
+  background: var(--blanco-marfil);
+}
+
+.links-page {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: clamp(2rem, 6vw, 3.5rem) 1.25rem;
+  overflow: hidden;
+}
+
+.links-atmosfera {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 55% at 50% -10%, rgba(198, 169, 107, 0.22), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 100% 100%, rgba(111, 127, 115, 0.18), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 0% 80%, rgba(232, 225, 216, 0.9), transparent 45%),
+    var(--blanco-marfil);
+  pointer-events: none;
+  animation: links-glow 12s ease-in-out infinite alternate;
+}
+
+@keyframes links-glow {
+  from {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+.links-shell {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 420px);
+  text-align: center;
+}
+
+.links-brand {
+  margin-bottom: 2rem;
+}
+
+.links-logo {
+  width: clamp(120px, 36vw, 160px);
+  margin: 0 auto 1rem;
+  animation: links-logo-in 0.9s ease both;
+}
+
+@keyframes links-logo-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.links-brand h1 {
+  font-size: clamp(1.75rem, 5vw, 2.15rem);
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.links-tagline {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gris-taupe);
+}
+
+.links-lista {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.links-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 1rem 1.15rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(198, 169, 107, 0.35);
+  color: var(--texto);
+  transition: transform var(--transicion), border-color var(--transicion), background var(--transicion), box-shadow var(--transicion);
+}
+
+.links-item:hover,
+.links-item:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--dorado-champan);
+  background: var(--blanco);
+  box-shadow: var(--sombra-suave);
+  outline: none;
+}
+
+.links-item-destacado {
+  background: var(--verde-salvia);
+  border-color: var(--verde-salvia);
+  color: var(--blanco-marfil);
+}
+
+.links-item-destacado:hover,
+.links-item-destacado:focus-visible {
+  background: #5f6e63;
+  border-color: #5f6e63;
+  color: var(--blanco);
+}
+
+.links-item-destacado .links-item-hint {
+  color: rgba(247, 246, 242, 0.78);
+}
+
+.links-item-label {
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.links-item-hint {
+  font-size: 0.82rem;
+  color: var(--gris-taupe);
+  font-weight: 300;
+}
+
+.links-copy {
+  margin-top: 1.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dorado-champan);
 }
