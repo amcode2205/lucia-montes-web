@@ -1,8 +1,8 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/mylinks", "destination": "/links.html" },
-    { "source": "/links", "destination": "/links.html" }
+  "redirects": [
+    { "source": "/mylinks", "destination": "/links", "permanent": false },
+    { "source": "/link", "destination": "/links", "permanent": false }
   ]
 }
