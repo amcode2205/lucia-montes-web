@@ -14,7 +14,7 @@
  * - Reseñas ................ carrusel Google ([data-reseñas])
  * - Pilares ................ expandir resumen ([data-pilar])
  *
- * WhatsApp (número): buscar "573192185873" en los HTML.
+ * WhatsApp (número): buscar "573234368397" en los HTML.
  */
 (() => {
   // ---------- Preloader ----------
