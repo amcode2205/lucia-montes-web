@@ -709,6 +709,11 @@ h3 {
   align-items: center;
 }
 
+.experiencia-copy h1 {
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  margin-bottom: 0.35rem;
+}
+
 .experiencia-copy p {
   color: var(--gris-taupe);
   margin-bottom: 1rem;
@@ -717,6 +722,11 @@ h3 {
 .experiencia-copy .lead {
   color: var(--texto);
   margin: 0.85rem 0 1.25rem;
+}
+
+/* Primera sección en Sobre Lucía: un poco más de aire superior */
+#quien-es-lucia {
+  padding-top: clamp(3.5rem, 7vw, 5.5rem);
 }
 
 .experiencia-dato {
